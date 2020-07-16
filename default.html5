@@ -117,6 +117,15 @@ body {
 
       const nodes = document.querySelectorAll('*');
       nodes.forEach(node => node.removeAttribute('style'));
+
+      // Scroll with j/k keys
+      document.addEventListener('keydown', event => {
+        if (event.keyCode == 74) {
+          scrollBy({top: 250, behavior: 'smooth'});
+        } else if (event.keyCode == 75) {
+          scrollBy({top: -250, behavior: 'smooth'});
+        }
+      });
     </script>
   </body>
 </html>
