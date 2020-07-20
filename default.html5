@@ -120,9 +120,9 @@ body {
 
       // Scroll with j/k keys
       document.addEventListener('keydown', event => {
-        if (event.keyCode == 74) {
+        if (event.key == 'j') {
           scrollBy({top: 250, behavior: 'smooth'});
-        } else if (event.keyCode == 75) {
+        } else if (event.key == 'k') {
           scrollBy({top: -250, behavior: 'smooth'});
         }
       });
