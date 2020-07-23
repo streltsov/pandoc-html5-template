@@ -119,10 +119,10 @@ body {
       nodes.forEach(node => node.removeAttribute('style'));
 
       // Scroll with j/k keys
-      document.addEventListener('keydown', event => {
-        if (event.key == 'j') {
+      document.addEventListener('keydown', ({ key }) => {
+        if (key == 'j') {
           scrollBy({top: 250, behavior: 'smooth'});
-        } else if (event.key == 'k') {
+        } else if (key == 'k') {
           scrollBy({top: -250, behavior: 'smooth'});
         }
       });
